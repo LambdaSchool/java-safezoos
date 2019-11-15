@@ -10,6 +10,8 @@ FROM telephone;
 DELETE
 FROM zoo;
 
+
+
 INSERT INTO zoo (zooid, zooname, createdby, createddate, lastmodifiedby, lastmodifieddate)
          VALUES (1, 'Gladys Porter Zoo', 'SYSTEM', CURRENT_TIMESTAMP, 'SYSTEM', CURRENT_TIMESTAMP),
                 (2, 'Point Defiance Zoo', 'SYSTEM', CURRENT_TIMESTAMP, 'SYSTEM', CURRENT_TIMESTAMP),
@@ -44,4 +46,6 @@ INSERT INTO zooanimals (zooid, animalid, createdby, createddate, lastmodifiedby,
                 (3, 1, 'SYSTEM', CURRENT_TIMESTAMP, 'SYSTEM', CURRENT_TIMESTAMP),
                 (3, 2, 'SYSTEM', CURRENT_TIMESTAMP, 'SYSTEM', CURRENT_TIMESTAMP);
 
+INSERT INTO users (userid, username, password, primaryemail)
+VALUES(1, 'tommy' , 'tommy', 'tommy@gmail.com');
 alter sequence hibernate_sequence restart with 10;

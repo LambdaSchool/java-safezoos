@@ -61,7 +61,7 @@ public class User extends Auditable
                 List<UserRoles> userRoles)
     {
         setUsername(username);
-        setPassword(password);
+        setPasswordNotEncrypt(password);
         this.primaryemail = primaryemail;
         for (UserRoles ur : userRoles)
         {
@@ -125,9 +125,10 @@ public class User extends Auditable
     public void setPassword(String password)
     {
         //TODO 6 encrypt the password
-        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-        this.password = passwordEncoder.encode(password);
-    }
+    //    BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+//
+        this.password = password;
+}
 
     public List<UserRoles> getUserroles()
     {

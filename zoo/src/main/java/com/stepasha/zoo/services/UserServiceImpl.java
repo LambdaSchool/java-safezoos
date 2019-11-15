@@ -82,7 +82,7 @@ public class UserServiceImpl implements UserService
         {
             throw new ResourceFoundException(user.getUsername() + " is already taken!");
         }
-
+        ArrayList<UserRoles> roles = new ArrayList<>();
         User newUser = new User();
         newUser.setUsername(user.getUsername()
                                 .toLowerCase());
